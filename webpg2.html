@@ -3,44 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Page 2</title>
+    <title>SafeWeb - Explore Topics (Page 2)</title>
 </head>
 <body>
+
 <header>
     <nav>
+        <div class="logo">CIPHER-NOVA LOGO</div>
         <ul>
             <li><a href="webpg1.html">Home</a></li>
-            <li><a href="webpg2.html">Page 2</a></li>
-            <li><a href="webpg3.html">Page 3</a></li>
+            <li><a href="webpg2.html">Explore (Page 2)</a></li>
+            <li><a href="webpg3.html">Details(Page 3)</a></li>
         </ul>
     </nav>
-    <div class="search-bar">
-        <img src="search-icon.png" alt="Search Icon">
-    </div>
-    <h1>Welcome to Page 2 of this website</h1>
-</header>
-<main>
-    <section class="Cyber Threats">
-        <h2>About Our Services</h2>
 
-        <p>We offer a wide range of services to cater to your needs. Our team is dedicated to ensuring that you have the best experience possible.</p>
+    <h1>Explore Digital Safety Topics</h1>
+    <p class="subtitle">Search for a topic below or click a category button to filter the cards.</p>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <label for="searchInput">Search Topics:</label>
+        <input type="text" id="searchInput" placeholder="Type e.g. Cyber, Digtal, AI...">
+    </div>
+
+    <!-- Categories -->
+    <div class="filter-buttons">
+        <button class="filter-btn " data-category="all">Show All</button>
+        <button class="filter-btn" data-category="cyber-threats">Cyber Threats</button>
+        <button class="filter-btn" data-category="account-security">Account Security</button>
+        <button class="filter-btn" data-category="digital-privacy">Digital Privacy</button>
+        <button class="filter-btn" data-category="social-engineering">Social Engineering</button>
+        <button class="filter-btn" data-category="ai-awareness">AI Awareness</button>
+    </div>
+</header>
+
+<main>
+    <!--Cyber Threats Section-->
+    <section class="topic-section" data-category="cyber-threats">
+        <h2>1. Cyber Threats</h2>
+        <p>Cyber threats are malicious attempts to damage or steal data from your computer or phone.</p>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>Malware &amp; Ransomware</h3>
+                <p>Harmful software hidden in fake downloads or attachments that can lock or steal your files.</p>
+                <a href="webpg3.html">Learn how to prevent it &rarr;</a>
+            </div>
+            <div class="card">
+                <h3>Unsafe Public Wi-Fi</h3>
+                <p>Free Wi-Fi in cafes and airports can allow hackers on the same network to intercept your data.</p>
+                <a href="webpg3.html">Read safety tips &rarr;</a>
+            </div>
+        </div>
     </section>
-    <section class="Account Security">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or need assistance, please feel free to reach out to us through our contact page.</p>
+
+    <!--Account Security-->
+    <section class="topic-section" data-category="account-security">
+        <h2>2. Account Security</h2>
+        <p>Protecting your online accounts stops hackers from logging in and stealing your identity.</p>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>Strong Passwords</h3>
+                <p>Use long passphrases with letters, numbers, and symbols. Never reuse the same password twice.</p>
+                <a href="webpg3.html">Read password guide &rarr;</a>
+            </div>
+            <div class="card">
+                <h3>Multi-Factor Authentication (MFA)</h3>
+                <p>Adds a second step (like a phone code) so hackers cannot log in even if they steal your password.</p>
+                <a href="webpg3.html">Why MFA matters &rarr;</a>
+            </div>
+        </div>
     </section>
-    <section class="Digital Privacy" >
-        <h2>Privacy Policy</h2>
-        <p>Your privacy is important to us. We have implemented strict measures to protect your personal information and ensure that your data is secure.</p>
+
+    <!--Digital Privacy -->
+    <section class="topic-section" data-category="digital-privacy">
+        <h2>3. Digital Privacy</h2>
+        <p>Your personal information is valuable. Learn how to control what you share online.</p>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>Social Media Oversharing</h3>
+                <p>Posting your location, birthday, or school details helps scammers guess your security questions.</p>
+                <a href="webpg3.html">Check warning signs &rarr;</a>
+            </div>
+            <div class="card">
+                <h3>Checking Website URLs</h3>
+                <p>Always look for "https://" and check the spelling of a website address before entering data.</p>
+                <a href="webpg3.html">How to inspect links &rarr;</a>
+            </div>
+        </div>
     </section>
-    <section class="Social Engineering">
-        <h2>Social Engineering</h2>
-        <p>This is the second page of our website. You can find more information about our services and offerings. We are committed to providing the best experience for our users.</p>
+
+    <!--Social Engineering-->
+    <section class="topic-section" data-category="social-engineering">
+        <h2>4. Social Engineering</h2>
+        <p>Instead of hacking computers, social engineering tricks <em>people</em> into giving away secrets.</p>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>Phishing Emails</h3>
+                <p>Fake emails pretending to be your bank, school, or delivery company to steal your login details.</p>
+                <a href="webpg3.html">Read full Phishing guide &rarr;</a>
+            </div>
+            <div class="card">
+                <h3>Smishing &amp; Vishing</h3>
+                <p>Phishing attacks sent through SMS text messages (Smishing) or fake phone calls (Vishing).</p>
+                <a href="webpg3.html">See types of phishing &rarr;</a>
+            </div>
+        </div>
     </section>
-    <section class="AI Awareness">
-        <h2>AI Awareness</h2> 
-        <p>We take phishing threats seriously and have implemented measures to protect our users from such attacks. Stay vigilant and report any suspicious activity.</p>
+
+    <!--AI Awareness -->
+    <section class="topic-section" data-category="ai-awareness">
+        <h2>5. Responsible Use of Generative AI</h2>
+        <p>AI tools like ChatGPT and image generators are useful, but they must be used safely and critically.</p>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>AI Hallucinations &amp; Fake Facts</h3>
+                <p>Generative AI can invent false information that sounds real. Always verify important facts.</p>
+                <a href="webpg3.html">Learn more &rarr;</a>
+            </div>
+            <div class="card">
+                <h3>Deepfakes &amp; Data Privacy</h3>
+                <p>Never type passwords or private data into AI chats, and watch out for AI-generated fake voices/videos.</p>
+                <a href="webpg3.html">Learn more &rarr;</a>
+            </div>
+        </div>
     </section>
+
+    <!--message that will appear when search finds nothing-->
+    <p id="noResults" style="display: none;">No matching topics found. Try another word!</p>
 </main>
+
+<footer>
+    <p>CIPHER-NOVA &mdash; Digital Safety, Cybersecurity &amp; Responsible Generative AI Project</p>
+</footer>
+
 </body>
 </html>
