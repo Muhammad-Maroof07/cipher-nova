@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap");
 
-/* Global Reset, resets all margins and styles */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -10,23 +10,92 @@
 :root {
   /* colors */
   --bg-dark: #091833;
+  --bg-darkblue: #0f2447;
+  --bg-glass: rgba(15, 36, 71, 0.45);
   --neon-cyan: #00fff0;
   --neon-pink: #ff2e9f;
+  --neon-purple: #b829ff;
+  --neon-yellow: #fcee0a;
+  --text-base: #e8f1ff;
+  --text-gray: #8ea8cc;
+
+  /* borders */
+  --border-light: rgba(0, 255, 240, 0.14);
+  --glow-cyan: 0 0 12px rgba(0, 255, 240, 0.45);
+  --glow-pink: 0 0 12px rgba(255, 46, 159, 0.45);
 
   /* sizes */
-
-  --base: 2rem;
   --small: 1rem;
+  --base: 2rem;
+  --large: 4rem;
 
-  /* fonts styles */
-
-  --font-base: "Orbitron", sans-serif;
+  /* fonts */
+  --font-highlights: "Orbitron", sans-serif;
+  --font-base: "Space Grotesk", sans-serif;
+  --font-regular: 400;
+  --font-bold: 600;
 }
 
 body {
-  margin: var(--base);
-  background: var(--bg-dark);
-  font-family: var(--font-base);
-  color: white;
   min-height: 100vh;
+  padding: var(--base);
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(0, 255, 240, 0.08),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(255, 46, 159, 0.08),
+      transparent 40%
+    ),
+    var(--bg-dark);
+  color: var(--text-base);
+  font-family: var(--font-base);
+  font-weight: var(--font-regular);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+nav,
+.logo {
+  font-family: var(--font-highlights);
+  font-weight: var(--font-bold);
+}
+
+main {
+  padding: var(--base);
+  margin: var(--large);
+  background-color: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  line-height: 1.8;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--small);
+  padding: var(--base);
+}
+
+ol,ul{
+  list-style-type: none;
+}
+
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
+a:hover {
+  color: var(--neon-pink);
+  text-shadow: var(--glow-pink);
 }

@@ -1,0 +1,60 @@
+/* people these are the component classes, just type their names in the class prperties of html elements and these styles will be automatically applied */
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: var(--small);
+  padding-top: 0;
+  margin-bottom: var(--base);
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--small);
+    width: 100%;
+  }
+
+  nav {
+    display: flex;
+    width: 100%;
+  }
+
+  nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: var(--small);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: var(--small);
+  }
+
+  .logo span {
+    white-space: nowrap;
+  }
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  line-height: 1.8;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: var(--base) 0;
+    border-radius: var(--small);
+    object-fit: cover;
+  }
+}
