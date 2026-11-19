@@ -1,0 +1,21 @@
+/* Global Reset, resets all margins and styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --bg-dark: #091833;
+  --neon-cyan: #00fff0;
+  --neon-pink: #ff2e9f;
+
+  /* fonts styles */
+
+  --Font: "Orbitron", sans-serif;
+}
+
+body {
+  background: var(--bg-dark);
+}
