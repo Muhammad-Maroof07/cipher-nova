@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
 /* Global Reset, resets all margins and styles */
 * {
   margin: 0;
@@ -11,11 +13,20 @@
   --neon-cyan: #00fff0;
   --neon-pink: #ff2e9f;
 
+  /* sizes */
+
+  --base: 2rem;
+  --small: 1rem;
+
   /* fonts styles */
 
-  --Font: "Orbitron", sans-serif;
+  --font-base: "Orbitron", sans-serif;
 }
 
 body {
+  margin: var(--base);
   background: var(--bg-dark);
+  font-family: var(--font-base);
+  color: white;
+  min-height: 100vh;
 }

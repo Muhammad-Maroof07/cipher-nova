@@ -3,16 +3,241 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Security Lab</title>
+    <meta
+      name="description"
+      content="Test your threat detection skills in the CIPHER-NOVA Phishing Detection Simulator. Inspect realistic email and SMS scenarios, spot red flags, and get instant feedback."
+    />
+    <title>CIPHER-NOVA | Security Lab &amp; Phishing Simulator</title>
   </head>
   <body>
     <header>
-      <h1>Security Lab</h1>
+      <a href="index.html" aria-label="CIPHER-NOVA Home">
+        <img
+          src="assets/icons/cipher-nova-logo.svg"
+          alt="CIPHER-NOVA Shield Logo"
+        />
+        <span>CIPHER-NOVA</span>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="details.html">Details</a></li>
+          <li>
+            <a href="security-lab.html" aria-current="page">Security Lab</a>
+          </li>
+          <li><a href="ai-safety.html">AI Safety</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
+
     <main>
-      <section class="lab1"></section>
-      <section class="lab2"></section>
-      <section class="lab3"></section>
+      <section class="lab1">
+        <p>INTERACTIVE THREAT SIMULATOR &bull; HANDS-ON TRAINING</p>
+        <h1>Security Lab: Phishing Detection Simulator</h1>
+        <p>
+          Analyze realistic email and SMS scenarios one at a time. Inspect the
+          sender address, subject line, tone, and link preview before deciding
+          whether each message is legitimate or a phishing attempt.
+        </p>
+
+        <div class="lab-scoreboard" aria-live="polite">
+          <div>
+            <span>Scenario</span>
+            <strong id="scenarioCounter">1 of 5</strong>
+          </div>
+          <div>
+            <span>Current Score</span>
+            <strong id="scoreDisplay">0 / 5</strong>
+          </div>
+          <div>
+            <span>Accuracy</span>
+            <strong id="accuracyDisplay">0%</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="lab2" aria-labelledby="simulator-heading">
+        <h2 id="simulator-heading">Message Inspection Console</h2>
+
+        <article class="scenario-viewer" id="scenarioCard">
+          <header class="message-header">
+            <span class="channel-badge" id="messageChannel"
+              >Email Scenario</span
+            >
+            <dl class="message-meta">
+              <div>
+                <dt>From:</dt>
+                <dd id="messageSender">
+                  IT Helpdesk
+                  &lt;<code>support@campus-portal-verify.net</code>&gt;
+                </dd>
+              </div>
+              <div>
+                <dt>To:</dt>
+                <dd id="messageRecipient">student.user@university.edu</dd>
+              </div>
+              <div>
+                <dt>Subject:</dt>
+                <dd id="messageSubject">
+                  ACTION REQUIRED: Password Expires in 3 Hours
+                </dd>
+              </div>
+            </dl>
+          </header>
+
+          <div class="message-body" id="messageBody">
+            <p>Dear Student,</p>
+            <p>
+              Our security system noticed your campus account password is set to
+              expire today. Failure to confirm your credentials within 3 hours
+              will lock your email and course portal access.
+            </p>
+            <p>
+              Confirm your login details immediately using the secure link
+              below:
+            </p>
+          </div>
+
+          <div class="link-preview-box">
+            <span>Simulated Link Preview (Hover / Destination URL):</span>
+            <code id="messageLinkPreview">
+              https://university.edu.login-reset-check.net/auth
+            </code>
+          </div>
+        </article>
+
+        <form id="classificationForm" class="decision-panel">
+          <fieldset>
+            <legend>How do you classify this message?</legend>
+
+            <label class="choice-option" for="choiceLegitimate">
+              <input
+                type="radio"
+                id="choiceLegitimate"
+                name="verdict"
+                value="legitimate"
+                required
+              />
+              <span>Legitimate Message</span>
+            </label>
+
+            <label class="choice-option" for="choicePhishing">
+              <input
+                type="radio"
+                id="choicePhishing"
+                name="verdict"
+                value="phishing"
+              />
+              <span>Suspicious / Phishing</span>
+            </label>
+          </fieldset>
+
+          <div class="decision-actions">
+            <button type="submit" id="submitVerdictBtn">
+              Submit Classification
+            </button>
+            <button type="button" id="nextScenarioBtn" hidden>
+              Next Scenario &rarr;
+            </button>
+            <button type="button" id="resetLabBtn">Restart Simulator</button>
+          </div>
+        </form>
+
+        <div
+          id="diagnosticFeedback"
+          class="feedback-panel"
+          role="status"
+          aria-live="polite"
+          hidden
+        >
+          <h3 id="feedbackHeading">Diagnostic Verdict</h3>
+          <p id="feedbackSummary"></p>
+          <ul id="feedbackClues"></ul>
+        </div>
+      </section>
+
+      <section
+        class="lab3"
+        id="labSummarySection"
+        aria-labelledby="summary-heading"
+      >
+        <h2 id="summary-heading">
+          Quick Inspection Checklist &amp; Session Summary
+        </h2>
+        <p>
+          Keep these four verification cues in mind across every scenario in the
+          simulator:
+        </p>
+
+        <ul>
+          <li>
+            <strong>Check the Sender Domain:</strong> Verify the exact domain
+            after the <code>@</code> symbol rather than trusting the display
+            name alone.
+          </li>
+          <li>
+            <strong>Inspect the Link Destination:</strong> Look at the true root
+            domain right before the first single <code>/</code> in the URL
+            preview.
+          </li>
+          <li>
+            <strong>Question Artificial Urgency:</strong> Be skeptical of
+            countdowns, account suspension threats, or unexpected prize/payment
+            claims.
+          </li>
+          <li>
+            <strong>Never Share Credentials or MFA Codes:</strong> Legitimate
+            support teams never ask you to submit passwords or one-time codes
+            through a link.
+          </li>
+        </ul>
+
+        <div id="finalResultsCard" hidden>
+          <h3>Simulation Complete</h3>
+          <p id="finalScoreText"></p>
+          <a href="details.html">Review Phishing Red Flags Guide</a>
+          <a href="ai-safety.html">Continue to AI Safety Guide</a>
+        </div>
+      </section>
     </main>
+
+    <footer>
+      <div>
+        <a href="index.html">
+          <img
+            src="assets/icons/cipher-nova-logo.svg"
+            alt="CIPHER-NOVA Shield Logo"
+          />
+          <span>CIPHER-NOVA</span>
+        </a>
+        <p>
+          Illuminate the Threat. Secure the Future. Educational guides and tools
+          for everyday digital safety.
+        </p>
+      </div>
+
+      <nav aria-label="Footer Navigation">
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="details.html">Details</a></li>
+          <li><a href="security-lab.html">Security Lab</a></li>
+          <li><a href="ai-safety.html">AI Safety</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <p>
+          Educational platform for digital safety, cybersecurity awareness, and
+          responsible generative AI use.
+        </p>
+        <p>&copy; 2026 CIPHER-NOVA. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>

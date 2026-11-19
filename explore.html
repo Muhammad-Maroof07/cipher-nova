@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse and filter CIPHER-NOVA digital safety topics across cyber threats, account security, digital privacy, social engineering, and responsible generative AI."
+    />
+    <title>CIPHER-NOVA | Explore Digital Safety Topics</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" aria-label="CIPHER-NOVA Home">
+        <img
+          src="assets/icons/cipher-nova-logo.svg"
+          alt="CIPHER-NOVA Shield Logo"
+          width="36"
+          height="36"
+        />
+        <span>CIPHER-NOVA</span>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explore.html" aria-current="page">Explore</a></li>
+          <li><a href="details.html">Details</a></li>
+          <li><a href="security-lab.html">Security Lab</a></li>
+          <li><a href="ai-safety.html">AI Safety</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="explore-hero">
+        <p>TOPIC CATALOG &amp; KNOWLEDGE BASE</p>
+        <h1>Explore Digital Safety Topics</h1>
+        <p>
+          Search by keyword or filter by category to find practical guides on
+          protecting your devices, accounts, personal privacy, and AI workflows.
+        </p>
+
+        <div class="filter-controls" role="search">
+          <div class="search-bar">
+            <label for="searchInput">Search Topics</label>
+            <input
+              type="search"
+              id="searchInput"
+              name="search"
+              placeholder="Search e.g. Phishing, MFA, Wi-Fi, Deepfakes..."
+              autocomplete="off"
+            />
+          </div>
+
+          <div
+            class="filter-buttons"
+            role="group"
+            aria-label="Filter topics by category"
+          >
+            <button
+              type="button"
+              class="filter-btn active"
+              data-category="all"
+              aria-pressed="true"
+            >
+              All Topics
+            </button>
+            <button
+              type="button"
+              class="filter-btn"
+              data-category="cyber-threats"
+              aria-pressed="false"
+            >
+              Cyber Threats
+            </button>
+            <button
+              type="button"
+              class="filter-btn"
+              data-category="account-security"
+              aria-pressed="false"
+            >
+              Account Security
+            </button>
+            <button
+              type="button"
+              class="filter-btn"
+              data-category="digital-privacy"
+              aria-pressed="false"
+            >
+              Digital Privacy
+            </button>
+            <button
+              type="button"
+              class="filter-btn"
+              data-category="social-engineering"
+              aria-pressed="false"
+            >
+              Social Engineering
+            </button>
+            <button
+              type="button"
+              class="filter-btn"
+              data-category="ai-awareness"
+              aria-pressed="false"
+            >
+              AI Awareness
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="catalog-section" aria-label="Digital Safety Topic Cards">
+        <div class="card-container" id="topicGrid">
+          <article
+            class="card"
+            data-category="cyber-threats"
+            data-keywords="malware ransomware trojan spyware virus downloads attachments backups updates"
+          >
+            <img
+              src="assets/images/cyber-hygiene.webp"
+              alt="Protected laptop and mobile device with active security shields and software update indicators"
+              width="400"
+              height="260"
+            />
+            <span class="badge">Cyber Threats</span>
+            <h2>Malware &amp; Ransomware Defense</h2>
+            <p>
+              Harmful software hidden in fake downloads, pirated installers, or
+              email attachments can lock or steal your files. Keep devices
+              patched and maintain offline backups.
+            </p>
+            <a href="details.html">Inspect Attack Tactics &rarr;</a>
+          </article>
+
+          <article
+            class="card"
+            data-category="cyber-threats"
+            data-keywords="public wifi hotspot network interception vpn encrypted https cafe airport"
+          >
+            <img
+              src="assets/images/cyber-hygiene.webp"
+              alt="Protected laptop and mobile device with active security shields and software update indicators"
+              width="400"
+              height="260"
+            />
+            <span class="badge">Cyber Threats</span>
+            <h2>Unsafe Public Wi-Fi Networks</h2>
+            <p>
+              Open Wi-Fi hotspots in cafes, hotels, and airports make it easier
+              for attackers on the same network to snoop on unencrypted traffic
+              or spoof login portals.
+            </p>
+            <a href="details.html">Learn Safe Browsing Habits &rarr;</a>
+          </article>
+
+          <article
+            class="card"
+            data-category="account-security"
+            data-keywords="passwords passphrases password manager credential stuffing reuse logins"
+          >
+            <img
+              src="assets/images/account-privacy.webp"
+              alt="Encrypted digital vault with multi-factor authentication key and privacy lock"
+              width="400"
+              height="260"
+            />
+            <span class="badge">Account Security</span>
+            <h2>Strong Passphrases &amp; Password Managers</h2>
+            <p>
+              Reusing passwords across sites lets one data breach compromise all
+              your accounts. Use unique 14+ character passphrases stored in a
+              reputable password manager.
+            </p>
+            <a href="details.html">Strengthen Account Defenses &rarr;</a>
+          </article>
+
+          <article
+            class="card"
+            data-category="account-security"
+            data-keywords="mfa 2fa multi-factor authentication authenticator app passkeys login"
+          >
+            <img
+              src="assets/images/account-privacy.webp"
+              alt="Encrypted digital vault with multi-factor authentication key and privacy lock"
+              width="400"
+              height="260"
+            />
+            <span class="badge">Account Security</span>
+            <h2>Multi-Factor Authentication (MFA)</h2>
+            <p>
+              Adding an authenticator app code or hardware passkey stops
+              attackers from accessing your account even if they phish or guess
+              your password.
+            </p>
+            <a href="security-lab.html">Test Login Scenarios in Lab &rarr;</a>
+          </article>
+
+          <article
+            class="card"
+            data-category="digital-privacy"
+            data-keywords="social media oversharing footprint personal data privacy settings tracking"
+          >
+            <img
+              src="assets/images/account-privacy.webp"
+              alt="Encrypted digital vault with multi-factor authentication key and privacy lock"
+              width="400"
+              height="260"
+            />
+            <span class="badge">Digital Privacy</span>
+            <h2>Social Media &amp; Digital Footprint</h2>
+            <p>
+              Publicly posting your birthday, location, school, or pet names
+              gives scammers clues to guess recovery questions and craft
+              targeted impersonation messages.
+            </p>
+            <a href="details.html">See How Attackers Use OSINT &rarr;</a>
+          </article>
+
+          <article
+            class="card"
+            data-category="digital-privacy"
+            data-keywords="urls https domain spoofing links browser inspection padlock"
+          >
+            <img
+              src="assets/images/phishing-defense.webp"
+              alt="Cybersecurity barrier blocking a suspicious phishing message and deceptive link"
+              width="400"
+              height="260"
+            />
+            <span class="badge">Digital Privacy</span>
+            <h2>Inspecting Links &amp; Website Domains</h2>
+            <p>
+              Look beyond the HTTPS padlock—check the exact root domain spelling
+              for subtle lookalike characters before entering credentials or
+              payment details.
+            </p>
+            <a href="details.html">Read URL Inspection Guide &rarr;</a>
+          </article>
+
+          <article
+            class="card"
+            data-category="social-engineering"
+            data-keywords="phishing spear phishing clone phishing emails urgency spoofing credentials"
+          >
+            <img
+              src="assets/images/phishing-defense.webp"
+              alt="Cybersecurity barrier blocking a suspicious phishing message and deceptive link"
+              width="400"
+              height="260"
+            />
+            <span class="badge">Social Engineering</span>
+            <h2>Phishing &amp; Spear Phishing Emails</h2>
+            <p>
+              Attackers impersonate banks, universities, or delivery services
+              using artificial urgency to trick you into clicking deceptive
+              login links.
+            </p>
+            <a href="details.html">Read Full Phishing Deep-Dive &rarr;</a>
+          </article>
+
+          <article
+            class="card"
+            data-category="social-engineering"
+            data-keywords="smishing vishing sms text phone call voice scams social engineering"
+          >
+            <img
+              src="assets/images/phishing-defense.webp"
+              alt="Cybersecurity barrier blocking a suspicious phishing message and deceptive link"
+              width="400"
+              height="260"
+            />
+            <span class="badge">Social Engineering</span>
+            <h2>Smishing (SMS) &amp; Vishing (Voice) Scams</h2>
+            <p>
+              Social engineering extends beyond email into urgent
+              parcel-delivery texts and spoofed bank support calls designed to
+              bypass your caution.
+            </p>
+            <a href="security-lab.html">Practice Spotting Scams &rarr;</a>
+          </article>
+
+          <article
+            class="card"
+            data-category="ai-awareness"
+            data-keywords="ai hallucinations fact checking misinformation citations generative ai"
+          >
+            <img
+              src="assets/images/ai-safety.webp"
+              alt="AI neural network and holographic verification shield inspecting digital data streams"
+              width="400"
+              height="260"
+            />
+            <span class="badge">AI Awareness</span>
+            <h2>AI Hallucinations &amp; Source Verification</h2>
+            <p>
+              Generative AI models predict plausible text rather than truth and
+              can fabricate citations or facts with high confidence. Always
+              verify against primary sources.
+            </p>
+            <a href="ai-safety.html">Open AI Safety Guide &rarr;</a>
+          </article>
+
+          <article
+            class="card"
+            data-category="ai-awareness"
+            data-keywords="deepfakes synthetic media prompt privacy confidential data voice cloning"
+          >
+            <img
+              src="assets/images/ai-safety.webp"
+              alt="AI neural network and holographic verification shield inspecting digital data streams"
+              width="400"
+              height="260"
+            />
+            <span class="badge">AI Awareness</span>
+            <h2>Deepfakes &amp; Prompt Data Privacy</h2>
+            <p>
+              Never paste passwords, IDs, or private records into public AI
+              prompts, and learn visual and audio cues to spot AI-cloned voices
+              and synthetic videos.
+            </p>
+            <a href="ai-safety.html">Use AI Verification Checklist &rarr;</a>
+          </article>
+        </div>
+
+        <div
+          id="noResults"
+          class="empty-state"
+          role="status"
+          aria-live="polite"
+          hidden
+        >
+          <h3>No Matching Topics Found</h3>
+          <p>
+            We couldn't find any safety guides matching your search or filter.
+            Try a different keyword or reset all filters.
+          </p>
+          <button type="button" id="resetFiltersBtn">Reset Filters</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <a href="index.html">
+          <img
+            src="assets/icons/cipher-nova-logo.svg"
+            alt="CIPHER-NOVA Shield Logo"
+            width="30"
+            height="30"
+          />
+          <span>CIPHER-NOVA</span>
+        </a>
+        <p>
+          Illuminate the Threat. Secure the Future. Educational guides and tools
+          for everyday digital safety.
+        </p>
+      </div>
+
+      <nav aria-label="Footer Navigation">
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="details.html">Details</a></li>
+          <li><a href="security-lab.html">Security Lab</a></li>
+          <li><a href="ai-safety.html">AI Safety</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <p>
+          Educational platform for digital safety, cybersecurity awareness, and
+          responsible generative AI use.
+        </p>
+        <p>&copy; 2026 CIPHER-NOVA. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
