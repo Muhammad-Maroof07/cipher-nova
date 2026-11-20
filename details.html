@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="In-depth CIPHER-NOVA educational guide on phishing and social engineering, covering attack variants, lifecycle stages, warning signs, and actionable prevention steps."
+    />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <title>CIPHER-NOVA | Phishing &amp; Social Engineering Guide</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <a href="index.html" aria-label="CIPHER-NOVA Home" class="logo">
+        <img
+          src="assets/icons/cipher-nova-logo.svg"
+          alt="CIPHER-NOVA Shield Logo"
+        />
+        <span>CIPHER-NOVA</span>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="details.html" aria-current="page">Details</a></li>
+          <li><a href="security-lab.html">Security Lab</a></li>
+          <li><a href="ai-safety.html">AI Safety</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="details-hero">
+        <p>DEEP-DIVE SECURITY GUIDE &bull; SOCIAL ENGINEERING</p>
+        <h1>Phishing &amp; Social Engineering</h1>
+        <p>
+          How attackers manipulate human psychology to bypass technical
+          defenses—and how you can spot, verify, and stop deceptive messages
+          before harm occurs.
+        </p>
+        <img
+          src="assets/images/phishing-defense.webp"
+          alt="Cybersecurity barrier blocking a suspicious phishing message and deceptive link"
+          width="600"
+          height="450"
+        />
+      </section>
+
+      <section class="psychology-section">
+        <h2>Why Attackers Target People Instead of Systems</h2>
+        <p>
+          Phishing is a form of social engineering in which attackers pose as a
+          trusted person, brand, or institution to trick victims into revealing
+          passwords, financial details, or verification codes. Rather than
+          breaking encryption, attackers exploit everyday emotions such as fear,
+          urgency, curiosity, and respect for authority so you act before
+          double-checking.
+        </p>
+      </section>
+
+      <section class="variants-section">
+        <h2>Five Major Phishing &amp; Social Engineering Variants</h2>
+        <p>
+          Modern phishing extends well beyond traditional spam emails across
+          multiple communication channels.
+        </p>
+
+        <div class="variants-grid">
+          <article class="variant-card">
+            <h3>1. Bulk Email Phishing</h3>
+            <p>
+              Mass-distributed emails disguised as banks, streaming platforms,
+              or cloud storage providers claiming your account will be suspended
+              unless you sign in immediately.
+            </p>
+          </article>
+
+          <article class="variant-card">
+            <h3>2. Spear Phishing</h3>
+            <p>
+              Targeted messages tailored to a specific individual or
+              organization using personal details gathered from social media or
+              prior data leaks to appear credible.
+            </p>
+          </article>
+
+          <article class="variant-card">
+            <h3>3. Smishing (SMS Phishing)</h3>
+            <p>
+              Deceptive text messages pretending to be parcel couriers, toll
+              agencies, or mobile carriers with shortened links leading to fake
+              payment or login forms.
+            </p>
+          </article>
+
+          <article class="variant-card">
+            <h3>4. Vishing (Voice Phishing)</h3>
+            <p>
+              Fraudulent phone calls using spoofed caller IDs or AI-cloned
+              voices impersonating bank fraud departments or IT support to
+              extract one-time passcodes.
+            </p>
+          </article>
+
+          <article class="variant-card">
+            <h3>5. Clone Phishing</h3>
+            <p>
+              Near-identical copies of legitimate receipts, shared documents, or
+              meeting invites you previously received, where genuine links or
+              attachments are swapped for malicious ones.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="lifecycle-section">
+        <h2>The Typical Phishing Attack Lifecycle</h2>
+        <p>
+          Understanding how an attack unfolds helps you interrupt it at any
+          stage.
+        </p>
+
+        <ol class="lifecycle-steps">
+          <li>
+            <h3>Reconnaissance &amp; Pretexting</h3>
+            <p>
+              Attackers research targets or select a believable scenario—such as
+              a failed delivery, security alert, or invoice dispute—to build
+              trust.
+            </p>
+          </li>
+          <li>
+            <h3>Hook &amp; Delivery</h3>
+            <p>
+              The deceptive email, SMS, or call arrives with an urgent call to
+              action designed to trigger an immediate emotional reaction.
+            </p>
+          </li>
+          <li>
+            <h3>Credential or Payload Capture</h3>
+            <p>
+              Clicking the link opens a lookalike login page that harvests your
+              username, password, and MFA code, or downloads malware onto your
+              device.
+            </p>
+          </li>
+          <li>
+            <h3>Account Takeover &amp; Lateral Spread</h3>
+            <p>
+              Once inside, attackers lock you out, steal sensitive data, or use
+              your compromised account to target your contacts next.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="warning-signs-section">
+        <h2>Key Warning Signs &amp; Red Flags</h2>
+        <ul>
+          <li>
+            <strong>Artificial Urgency or Threats:</strong> Claims that your
+            account will be closed within 24 hours or that legal action is
+            imminent if you do not click right away.
+          </li>
+          <li>
+            <strong>Mismatched Sender Domains:</strong> Display names like
+            "PayPal Support" sent from unrelated or subtly misspelled addresses
+            such as <code>support@paypa1-security-alert.com</code>.
+          </li>
+          <li>
+            <strong>Deceptive &amp; Lookalike URLs:</strong> Links whose visible
+            text points to an official site while the underlying destination
+            uses extra subdomains or swapped characters.
+          </li>
+          <li>
+            <strong>Generic Greetings &amp; Awkward Phrasing:</strong>
+            Impersonal openings like "Dear Valued Customer" paired with unusual
+            formatting or grammatical errors.
+          </li>
+          <li>
+            <strong>Requests for Credentials or MFA Codes:</strong> Legitimate
+            organizations never ask you to confirm your password, PIN, or
+            one-time security code via email, text, or phone.
+          </li>
+        </ul>
+      </section>
+
+      <section class="annotated-example-section">
+        <h2>Anatomy of a Phishing Email: Annotated Red Flags</h2>
+        <p>
+          Inspect how multiple warning signs combine inside a typical credential
+          harvesting message:
+        </p>
+
+        <article class="sample-message">
+          <header class="sample-meta">
+            <p>
+              <strong>From:</strong> NovaBank Security Desk
+              &lt;<code>alerts@novabank-verify-login.net</code>&gt;
+              <span class="flag-tag"
+                >[Red Flag 1: Lookalike External Domain]</span
+              >
+            </p>
+            <p>
+              <strong>Subject:</strong> URGENT: Your account will be permanently
+              suspended in 2 hours!
+              <span class="flag-tag">[Red Flag 2: Manufactured Panic]</span>
+            </p>
+          </header>
+
+          <div class="sample-body">
+            <p>
+              Dear Valued Customer,
+              <span class="flag-tag">[Red Flag 3: Generic Greeting]</span>
+            </p>
+            <p>
+              We detected an unauthorized sign-in attempt from an unrecognized
+              device. If you do not verify your identity immediately, your
+              online banking access and pending transfers will be frozen.
+            </p>
+            <p>
+              Verify now at:
+              <code>https://novabank.com.account-check-portal.net/signin</code>
+              <span class="flag-tag"
+                >[Red Flag 4: Deceptive Subdomain URL]</span
+              >
+            </p>
+            <p>
+              Please enter your full password and reply with your 6-digit SMS
+              verification code to restore access.
+              <span class="flag-tag"
+                >[Red Flag 5: Credential &amp; MFA Harvesting]</span
+              >
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="prevention-section">
+        <h2>Actionable Prevention &amp; Defense Habits</h2>
+        <ul>
+          <li>
+            <strong>Verify Independently:</strong> Never use phone numbers or
+            links inside a suspicious message. Open your browser and navigate to
+            the official website or call the number on the back of your bank
+            card.
+          </li>
+          <li>
+            <strong>Inspect the Root Domain:</strong> Hover over links on
+            desktop or press and hold on mobile to read the actual domain before
+            tapping.
+          </li>
+          <li>
+            <strong>Use Phishing-Resistant MFA:</strong> Enable passkeys or
+            authenticator apps instead of SMS codes, which are easier to
+            intercept or socially engineer.
+          </li>
+          <li>
+            <strong>Let a Password Manager Auto-Fill:</strong> Password managers
+            only fill credentials on the exact legitimate domain, instantly
+            exposing lookalike phishing sites.
+          </li>
+          <li>
+            <strong>Report &amp; Delete:</strong> Forward suspicious messages to
+            your organization's security team or use your email provider's
+            "Report Phishing" button.
+          </li>
+        </ul>
+
+        <div class="next-steps-cta">
+          <h3>Ready to Put Your Skills to the Test?</h3>
+          <p>
+            Practice spotting real-world red flags in our interactive phishing
+            simulator or explore more digital safety guides.
+          </p>
+          <a href="security-lab.html">Test Yourself in Security Lab</a>
+          <a href="explore.html">Back to Topic Explorer</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <a href="index.html">
+          <img
+            src="assets/icons/cipher-nova-logo.svg"
+            alt="CIPHER-NOVA Shield Logo"
+            width="30"
+            height="30"
+          />
+          <span>CIPHER-NOVA</span>
+        </a>
+        <p>
+          Illuminate the Threat. Secure the Future. Educational guides and tools
+          for everyday digital safety.
+        </p>
+      </div>
+
+      <nav aria-label="Footer Navigation">
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="details.html">Details</a></li>
+          <li><a href="security-lab.html">Security Lab</a></li>
+          <li><a href="ai-safety.html">AI Safety</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <p>
+          Educational platform for digital safety, cybersecurity awareness, and
+          responsible generative AI use.
+        </p>
+        <p>&copy; 2026 CIPHER-NOVA. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

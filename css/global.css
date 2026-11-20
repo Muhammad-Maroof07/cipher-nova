@@ -1,21 +1,205 @@
-/* Global Reset, resets all margins and styles */
-* {
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 :root {
-  /* colors */
   --bg-dark: #091833;
+  --bg-darkblue: #0f2447;
+  --bg-glass: rgba(15, 36, 71, 0.45);
+  --bg-panel: rgba(9, 24, 51, 0.65);
   --neon-cyan: #00fff0;
   --neon-pink: #ff2e9f;
+  --neon-purple: #b829ff;
+  --neon-yellow: #fcee0a;
+  --text-base: #e8f1ff;
+  --text-gray: #8ea8cc;
 
-  /* fonts styles */
+  --border-light: rgba(0, 255, 240, 0.14);
+  --border-strong: rgba(0, 255, 240, 0.35);
+  --glow-cyan: 0 0 12px rgba(0, 255, 240, 0.45);
+  --glow-pink: 0 0 12px rgba(255, 46, 159, 0.45);
+  --glow-yellow: 0 0 12px rgba(252, 238, 10, 0.4);
 
-  --Font: "Orbitron", sans-serif;
+  --tiny: 0.5rem;
+  --small: 1rem;
+  --base: 2rem;
+  --large: 4rem;
+
+  --font-highlights: "Orbitron", sans-serif;
+  --font-base: "Space Grotesk", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-regular: 400;
+  --font-bold: 600;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
-  background: var(--bg-dark);
+  min-height: 100vh;
+  padding: clamp(var(--small), 3vw, var(--base));
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(0, 255, 240, 0.08),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(255, 46, 159, 0.08),
+      transparent 40%
+    ),
+    var(--bg-dark);
+  background-attachment: fixed;
+  color: var(--text-base);
+  font-family: var(--font-base);
+  font-weight: var(--font-regular);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+nav,
+.logo {
+  font-family: var(--font-highlights);
+  font-weight: var(--font-bold);
+  letter-spacing: 0.04em;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+  line-height: 1.3;
+  color: var(--neon-cyan);
+}
+
+h3 {
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+p {
+  max-width: 72ch;
+}
+
+main {
+  max-width: 1200px;
+  margin: clamp(var(--small), 3vw, var(--base)) auto
+    clamp(var(--base), 5vw, var(--large));
+  padding: clamp(var(--small), 4vw, var(--base));
+  background-color: var(--bg-glass);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  line-height: 1.8;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--small);
+  padding: clamp(var(--small), 3vw, var(--base));
+}
+
+section + section {
+  border-top: 1px solid var(--border-light);
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  padding: 0.15em 0.4em;
+  background: rgba(0, 255, 240, 0.08);
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  color: var(--neon-cyan);
+  word-break: break-word;
+}
+
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--neon-pink);
+  text-shadow: var(--glow-pink);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--neon-pink);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--base) var(--small);
+  border-top: 1px solid var(--border-light);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--base);
+  color: var(--text-gray);
+  font-size: 0.95rem;
+}
+
+footer > div,
+footer > nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tiny);
+}
+
+footer > div:first-child > a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tiny);
+  font-family: var(--font-highlights);
+  font-weight: var(--font-bold);
+  color: var(--text-base);
+}
+
+footer h3 {
+  font-size: 0.95rem;
+  color: var(--text-base);
+  margin-bottom: var(--tiny);
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
 }

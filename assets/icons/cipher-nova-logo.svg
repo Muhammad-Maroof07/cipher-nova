@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <defs>
+    <linearGradient id="cn-grad" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#39DFFF" />
+      <stop offset="100%" stop-color="#B66AFF" />
+    </linearGradient>
+  </defs>
+  <!-- Outer Shield -->
+  <path d="M32 5L10 14.5V30.5C10 44.8 19.4 56.9 32 60C44.6 56.9 54 44.8 54 30.5V14.5L32 5Z" fill="#111B2D" stroke="url(#cn-grad)" stroke-width="3.5" stroke-linejoin="round" />
+  <!-- Inner Circuit Lines -->
+  <path d="M32 14V23M32 41V50M19 31H24M40 31H45" stroke="#39DFFF" stroke-width="2.2" stroke-linecap="round" />
+  <!-- Central Nova Star / Core -->
+  <path d="M32 21L35.2 27.8L42 31L35.2 34.2L32 41L28.8 34.2L22 31L28.8 27.8L32 21Z" fill="url(#cn-grad)" />
+</svg>
