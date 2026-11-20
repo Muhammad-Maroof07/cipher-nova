@@ -1,0 +1,165 @@
+#feedback-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem 1.5rem;
+  max-width: 52rem;
+  padding: clamp(1rem, 3vw, 2rem);
+  background: var(--bg-panel);
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+}
+
+#feedback-form > div {
+  display: grid;
+  align-content: start;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+#feedback-form > div:has(> #message, > #consent),
+#feedback-form > button {
+  grid-column: 1 / -1;
+}
+
+/* ---------- labels and fields ---------- */
+#feedback-form label {
+  font-weight: var(--font-bold);
+}
+
+#feedback-form :is(input:not([type="checkbox"]), select, textarea) {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.7rem 0.9rem;
+  background: var(--bg-dark);
+  color: var(--text-base);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  font: inherit;
+  line-height: 1.4;
+}
+
+#feedback-form textarea {
+  height: 7.5rem;
+  resize: vertical;
+}
+
+#feedback-form p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--text-gray);
+}
+
+#feedback-form p:empty {
+  display: none;
+}
+
+#feedback-form p[id$="-error"] {
+  color: #ff7fc0;
+  font-weight: var(--font-bold);
+}
+
+#feedback-form > div:has(> #consent) {
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  column-gap: 0.8rem;
+}
+
+#consent {
+  width: 1.3rem;
+  height: 1.3rem;
+  accent-color: var(--neon-cyan);
+}
+
+#feedback-form label[for="consent"] {
+  font-weight: var(--font-regular);
+  cursor: pointer;
+}
+
+#consent-error {
+  grid-column: 2;
+}
+
+#feedback-form > button {
+  justify-self: start;
+  min-width: 16rem;
+  min-height: 3.3rem;
+  padding: 0.8rem 2rem;
+  background: var(--neon-cyan);
+  color: var(--bg-dark);
+  border: 2px solid var(--neon-cyan);
+  border-radius: 8px;
+  font: var(--font-bold) 1rem var(--font-highlights);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* ---------- neon hover (same effect as .featured article) ---------- */
+#feedback-form,
+#feedback-form :is(input:not([type="checkbox"]), select, textarea),
+#feedback-form > button {
+  transition: transform 0.3s ease, border-color 0.3s ease,
+              box-shadow 0.3s ease, background 0.3s ease;
+}
+
+#feedback-form:hover,
+#feedback-form :is(input:not([type="checkbox"]), select, textarea):hover,
+#feedback-form :is(input:not([type="checkbox"]), select, textarea):focus {
+  border-color: var(--neon-cyan);
+  box-shadow: var(--glow-cyan);
+}
+
+#feedback-form > button:hover {
+  background: var(--text-base);
+  border-color: var(--text-base);
+  transform: translateY(-4px);
+  box-shadow: var(--glow-cyan);
+}
+
+/* errors stay pink - keep this AFTER the hover rules */
+#feedback-form :is(input, select, textarea)[aria-invalid="true"],
+#feedback-form :is(input, select, textarea)[aria-invalid="true"]:is(:hover, :focus) {
+  border-color: var(--neon-pink);
+  box-shadow: var(--glow-pink);
+}
+
+#form-status:not(:empty) {
+  max-width: 52rem;
+  padding: 0.9rem 1.2rem;
+  background: var(--bg-panel);
+  border: 2px solid var(--border-strong);
+  border-radius: 8px;
+  font-weight: var(--font-bold);
+}
+
+/* empty live region stays for screen readers but takes no space */
+#form-status:empty {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+#form-status[data-state="error"] {
+  border-color: var(--neon-pink);
+  color: #ff7fc0;
+}
+
+#form-status[data-state="success"] {
+  border-color: #35d69a;
+  color: #35d69a;
+}
+
+/* ---------- small screens ---------- */
+@media (max-width: 40rem) {
+  #feedback-form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #feedback-form > button {
+    width: 100%;
+    justify-self: stretch;
+    min-width: 0;
+  }
+}
