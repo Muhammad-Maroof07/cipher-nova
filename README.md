@@ -6,9 +6,8 @@ This is a group project focused on showcasing cybersecurity practices, privacy a
 
 - cipher-nova ( this is the root )
 - 6 html files ( pages )
-- two css folders : css , and another folder within css called styles
+- one css folders : css with styles
 - css contains the basic styling and settings that remain consistent throughout the project
-- styles contains all the specific styles applied to each page or component etc
 - a js folder ( this contains all the js code for the app, and subfolders: features and utils )
 - the main js folder contains all the main js based functionality
 - the features contains all the respective js features applied to each page
