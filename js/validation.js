@@ -1,3 +1,4 @@
+// For Validation in contact feedback page (page 6).
 (function (global) {
   "use strict";
 
