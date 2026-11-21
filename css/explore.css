@@ -1,0 +1,22 @@
+/* 1. Card titles: global h2 is page-title size, too big inside a card */
+.card h2 {
+  font-size: 1.1rem;
+  color: var(--text-base);
+}
+
+/* 3. Stop the grid overflowing on small phones */
+#topicGrid {
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+}
+
+/* 4. Less padding inside cards on phones */
+@media (max-width: 480px) {
+  .card {
+    padding: var(--small);
+  }
+}
+
+/* keep search box from stretching too wide*/
+.search-bar {
+  max-width: 850px;
+}
