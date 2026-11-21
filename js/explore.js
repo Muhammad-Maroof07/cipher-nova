@@ -1,11 +1,11 @@
-// 1. Grab the elements we need from the page
+// 1. Grabing the elements we need from the page
 const searchInput = document.getElementById("searchInput");
 const filterButtons = document.querySelectorAll(".filter-btn");
 const cards = document.querySelectorAll("#topicGrid .card");
 const noResults = document.getElementById("noResults");
 const resetButton = document.getElementById("resetFiltersBtn");
 
-// 2. Remember which category is selected right now
+// 2. which category is selected right now
 let selectedCategory = "all";
 
 // 3. Main function: show or hide each card
@@ -29,11 +29,11 @@ function filterCards() {
     }
   });
 
-  // Show the "No Matching Topics" box only when zero cards are visible
+  // "No Matching Topics" 
   noResults.hidden = visibleCount > 0;
 }
 
-// 4. Helper: highlight one button, un-highlight the rest
+// 4. highlight one button, un-highlight the rest
 function setActiveButton(activeButton) {
   filterButtons.forEach(function (button) {
     button.classList.remove("active");
